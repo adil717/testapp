@@ -1,0 +1,1 @@
+#!/bin/bash if forever list | grep /var/nodejs/CodeDeployDemo/bin/www > /dev/null then echo "Server is running and it will be stopped" forever stop /var/nodejs/CodeDeployDemo/bin/www else echo "Server has been stopped" fi 

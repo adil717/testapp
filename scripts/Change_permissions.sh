@@ -1,0 +1,1 @@
+ #!/bin/bash chmod -R 755 /var chown -R ubuntu:ubuntu /var

@@ -1,0 +1,1 @@
+ #!/bin/bash cd /var/nodejs/CodeDeployDemo npm install 
