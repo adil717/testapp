@@ -1,22 +1,22 @@
---- 
-AfterInstall: 
-  - 
-    location: "scripts / change_permissions.sh"
-ApplicationStart: 
-  - 
-    location: "scripts / start_server.sh"
-ApplicationStop: 
-  - 
-    location: "scripts / stop_server.sh"
-BeforeInstall: 
-  - 
-    location: "scripts / install_dependencies.sh"
-Destination: "/ opt / CodeDeployDemo"
-Files: 
-  - 
-    source: /
-Hooks: ~
-Os: linux
-Runas: root
-Timeout: 300
-Version: 0.0
+  Version: 0.0 
+  Os: linux 
+  Files: 
+  - source: / 
+  Destination: / opt / CodeDeployDemo 
+  Hooks: 
+  BeforeInstall: 
+  - location: scripts / install_dependencies.sh 
+  Timeout: 300 
+  Runas: root 
+  AfterInstall: 
+  - location: scripts / change_permissions.sh 
+  Timeout: 300 
+  Runas: root 
+  ApplicationStart: 
+  - location: scripts / start_server.sh 
+  Timeout: 300 
+  Runas: root 
+  ApplicationStop: 
+  - location: scripts / stop_server.sh 
+  Timeout: 300 
+  Runas: root 
